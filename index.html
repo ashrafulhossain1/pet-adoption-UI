@@ -1,11 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>share repo</title>
+    <title>Document</title>
+    <!-- google  font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind and daisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom CSS -->
+    <style>
+        .font-lato {
+            font-family: "Lato", sans-serif;
+        }
+
+        .font-inter {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
 </head>
+
 <body>
-    <h3>the </h3>
+    <!-- header section -->
+    <header class="w-11/12 md:w-10/12 mx-auto font-lato mt-8 mb-10 lg:mb-24">
+        <!-- navbar -->
+        <nav class="navbar bg-base-100 p-0 mt-3 md:mt-6 ">
+            <div class="navbar-start">
+                <!-- left -->
+                <div class="">
+                    <a href="#" class="flex justify-center items-center gap-4">
+                        <img class="w-full h-full" src="./images/logo.webp" alt="">
+                        <span class="text-3xl font-black">Peddy</span>
+                    </a>
+                </div>
+            </div>
+            <!-- center -->
+            <div class="navbar-center hidden lg:flex text-lg text-gray-500">
+                <ul class="menu menu-horizontal px-1 space-x-5 text-lg font-semibold">
+                    <li><a>Home</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <!-- right -->
+            <div class="navbar-end">
+                <a class="btn w-14 h-14 rounded-full">
+                    <img src="https://img.icons8.com/?size=100&id=82751&format=png&color=000000" alt="">
+                </a>
+            </div>
+            <!-------------------------- mobile dropdown -------------------------->
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-32 p-2 shadow right-0 gap-3">
+                    <li><a>Home</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- hero section -->
+        <div class="mt-4 md:mt-14  xl:w-8/12 mx-auto grid">
+            <!-- text content -->
+            <div class="text-center space-y-3 md:space-y-6 order-2 md:-order-10">
+                <h3 class="text-base md:text-xl text-gray-500 font-semibold">Bringing Families Together ❤️‍🔥</h3>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl text-gray-900 font-black">
+                    Your Path to Adoption<br>Starts Here
+                </h1>
+                <p class="text-gray-900 sm:text-lg w-full ">Pets have been a part of human lives for centuries, offering
+                    companionship, love, and a sense of purpose. The benefits of owning a pet go beyond the joy of
+                    having a furry friend to cuddle with. From physical to psychological advantages, the perks of pet
+                    ownership.</p>
+                <div>
+                    <a href="#view-more">
+                        <button
+                            class="mt-2 md:mt-2 btn rounded-xl bg-teal-700 text-lg sm:text-xl font-bold text-white hover:bg-green-600">
+                            View More
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <!-- image content -->
+            <div>
+                <img class="w-full" src="./images/pet.webp" alt="">
+            </div>
+        </div>
+    </header>
+    <main>
+        <!--pets adopt section -->
+        <section id="view-more" class="w-11/12 2xl:w-10/12 mx-auto">
+            <!--Segment heading -->
+            <div class="w-full md:w-3/4 mx-auto font-lato">
+                <h2 class="text-2xl md:text-3xl lg:text-5xl text-gray-900 text-center bg-center font-bold ">Adopt Your
+                    Best Friend</h2>
+                <p class="text-gray-800  md:text-xl text-center mt-4 md:mt-6">Adopting a pet has many benefits, some of
+                    which you may have not considered. Here are some reasons why adopting a pet would benefit you and
+                    your family. By adopting from a shelter, you are providing an animal with the second chance they
+                    deserve.</p>
+            </div>
+
+            <!-- ==================================================================================================== -->
+            <!--pets card and history container (API) -->
+            <!-- ==================================================================================================== -->
+            <div class="my-4 sm:my-6 md:my-8 xl:my-12">
+
+                <!-- Category buttons -->
+                <div id="category-container" class="grid grid-cols-2 lg:grid-cols-4 gap-6 font-inter"></div>
+
+                <!-- sort By price -->
+                <div class="my-8 flex justify-between items-center font-lato">
+                    <h4 class="text-lg md:text-2xl font-black">Best Deal For You</h4>
+                    <button onclick="SortCategories()"
+                        class="btn text-base md:textxl bg-teal-700 hover:bg-green-600 text-white font-bold">Sort By Price</button>
+                </div>
+
+                <!-- spinner -->
+                <div class="mx-auto flex items-center justify-center">
+                    <span id="spinner" class="loading loading-bars loading-lg"></span>
+                </div>
+
+                <!-- all pets and select pets full container (parent) -->
+                <div id="parentAll" class="flex flex-col md:flex-row justify-between gap-3 lg:gap-6">
+                    <!--cards container-->
+                    <div id="pet-cards-container"
+                        class="lg:w-3/4 md:w-7/12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 border-2 border-gray-200 rounded-2xl p-2 md:p-3 lg:p-4">
+                        <!--  -->
+
+                    </div>
+                    <!-- activity history images-->
+                    <div class="p-2 md:p-3 lg:6  lg:w-1/4 md:w-5/12 border-2 border-gray-200 rounded-xl">
+                        <!--  -->
+                        <div id="activity-container" class="grid grid-cols-2 gap-2 lg:gap-4">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- modals -->
+        <section>
+            <!-- details modal -->
+            <dialog id="detailsModalShow" class="modal">
+                <div class="modal-box w-11/12 max-w-3xl">
+                    <div id="details-modal-contents">
+                        <!-- inject from DOM -->
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog" class="w-full">
+                            <!-- if there is a button, it will close the modal -->
+                            <button class="btn w-full font-inter bg-teal-50 border border-teal-100">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+            <!-- Adopt Modal -->
+            <dialog id="adoptModalShow" class="modal">
+                <div class="modal-box text-center">
+                    <div id="adopt-modal-contents">
+
+                    </div>
+                    <div class="modal-action ">
+                        <form method="dialog" class="w-full">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <!-- <button class="btn w-full">Close</button> -->
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+    </main>
+    <!-- footer section -->
+    <section class="py-8 md:py-24 bg-[#131313]">
+        <footer
+            class="w-11/12 md:w-10/12 mx-auto flex flex-col md:flex-row grid-cols-1 md:grid-cols-3 justify-between gap-y-6 gap-x-8">
+            <nav class="font-lato order-3 md:order-1 w-full md:w-3/4 lg:w-1/2 space-y-3">
+                <h2 class="flex gap-4 items-center mb-6">
+                    <img class="w-7" src="./images/logo.webp" alt="" />
+                    <span class="text-slate-300 text-4xl font-bold">Peddy</span>
+                </h2>
+                <li class="list-none">
+                    <a class="link link-hover text-gray-500 text-base md:text-lg">Location: av. Washington 165,
+                        NYCA-54003</a>
+                </li>
+                <li class="list-none">
+                    <a class="link link-hover text-gray-500 text-base md:text-lg">Phone: +31 85 964 47 25</a>
+                </li>
+                <li class="list-none">
+                    <a class="link link-hover text-gray-500 text-base md:text-lg">Openings hours: 9.00 AM - 5.00 PM</a>
+                </li>
+                <li class="list-none">
+                    <a class="link link-hover text-gray-500 text-base md:text-lg">Email: info@yourdomain.com</a>
+                </li>
+                <p class="text-2xl md:text-3xl space-x-4">
+                    <i class="fa-brands fa-facebook text-blue-600"></i>
+                    <i class="fa-brands fa-linkedin text-blue-400"></i>
+                    <i class="fa-brands fa-x-twitter text-white"></i>
+                    <i class="fa-brands fa-instagram text-orange-500"></i>
+                </p>
+            </nav>
+            <nav
+                class="font-lato grid gap-x-8 grid-cols-2 sm:grid-cols-1 order-2 md:order-2 w-full md:w-3/4 lg:w-1/2 space-y-3">
+                <h6 class="text-lg  text-slate-300 mb-6 font-black col-span-2 md:col-span-1 ">Useful Links</h6>
+                <a class="link link-hover text-gray-500 text-base md:text-lg">Home</a>
+                <a class="link link-hover text-gray-500 text-base md:text-lg">About us</a>
+                <a class="link link-hover text-gray-500 text-base md:text-lg">Animal</a>
+                <a class="link link-hover text-gray-500 text-base md:text-lg">Foundation</a>
+                <a class="link link-hover text-gray-500 text-base md:text-lg">Contact </a>
+            </nav>
+            <nav class="order-1 md:order-3 w-full  md:w-3/4 lg:w-1/2 space-y-3">
+                <h6 class="font-inter text-lg  text-slate-300 mb-6 font-black">Drop a Message</h6>
+                <label
+                    class="font-inter input w-full input-bordered flex items-center gap-2 bg-[#1F1F1F]  p-2 rounded-lg mb-4">
+                    <input type="text" class="grow outline-none w-full sm:auto text-gray-500 placeholder:text-gray-500"
+                        placeholder="Write your feedback" />
+                </label>
+                <button
+                    class="font-lato btn w-full bg-teal-700 text-lg border-none text-white hover:bg-green-600">Submit</button>
+            </nav>
+        </footer>
+    </section>
+    <script src="./scripts/pets.js"></script>
 </body>
 </html>
