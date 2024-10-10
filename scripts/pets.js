@@ -244,7 +244,7 @@ const activeAdd = (targetBtn) => {
 }
 
 
-// new fetch
+// new fetch for sorting
 const SortCategories = async () => {
     try {
         const uri = `https://openapi.programming-hero.com/api/peddy/pets`;
@@ -256,8 +256,6 @@ const SortCategories = async () => {
     catch (error) {
         console.log("fetch error:", error)
     }
-
-
 }
 
 const sortMachine = (pets) => {
@@ -266,6 +264,6 @@ const sortMachine = (pets) => {
     })
 }
 
-// calls
+// ---------------------------called-----------------------------
 loadCategories();
 loadPets();
